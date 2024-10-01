@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Retention Prediction</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(45deg, #1f4037, #99f2c8);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+        }
+        h1 {
+            font-size: 28px;
+            color: #fff;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input[type="text"], select {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+        input[type="submit"] {
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        label {
+            color: #fff;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🔮 Employee Retention Prediction</h1>
+        <form action="/predict" method="POST">
+            <label for="satisfaction_level">Satisfaction Level</label>
+            <input type="text" name="satisfaction_level" required>
+
+            <label for="last_evaluation">Last Evaluation</label>
+            <input type="text" name="last_evaluation" required>
+
+            <label for="number_project">Number of Projects</label>
+            <input type="text" name="number_project" required>
+
+            <label for="average_montly_hours">Average Monthly Hours</label>
+            <input type="text" name="average_montly_hours" required>
+
+            <label for="time_spend_company">Years at Company</label>
+            <input type="text" name="time_spend_company" required>
+
+            <label for="work_accident">Work Accident (0/1)</label>
+            <input type="text" name="work_accident" required>
+
+            <label for="promotion_last_5years">Promotion in Last 5 Years (0/1)</label>
+            <input type="text" name="promotion_last_5years" required>
+
+            <label for="department">Department (0-8)</label>
+            <input type="text" name="department" required>
+
+            <label for="salary">Salary (0 = low, 1 = medium, 2 = high)</label>
+            <input type="text" name="salary" required>
+
+            <input type="submit" value="🔮 Predict">
+        </form>
+    </div>
+
+</body>
+</html>
